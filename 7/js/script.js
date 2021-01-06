@@ -22,3 +22,11 @@ window.onload = function() {
         menu.style.left = "calc(-50vw)";
     })
 }
+
+function changeNumber(num) {
+    var rand = Math.floor(Math.random() * (9 - 1) + 1);
+    console.log(rand);
+
+    return Math.abs(num**rand);
+  }
+  console.log(changeNumber(3))

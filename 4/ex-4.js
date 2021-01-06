@@ -12,7 +12,7 @@ let num = parseInt(prompt('Введите число: '));
 while(isNaN(num)) {
     num = parseInt(prompt('Пожалуйста, введите число, а не строку'));
 }
-const mod = num < 0 ? -num : num;
 numSpan.textContent = num;
-modSpan.textContent = mod;
-console.log(mod);
+num = num < 0 ? -num : num;
+modSpan.textContent = num;
+console.log(num);
