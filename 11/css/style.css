@@ -1,0 +1,15 @@
+.price-graph {
+  height: 20px;
+}
+
+.bitcoin .price-graph {
+  background-color: brown;
+}
+
+.ethereum .price-graph {
+  background-color: cornflowerblue;
+}
+
+.litecoin .price-graph {
+  background-color: darkgoldenrod;
+}
