@@ -6,27 +6,25 @@ window.onload = function() {
         }
 
         hasCat() {
-            console.log('cat!!')
             this.happiness += 1;
             return this.happiness;
         }
 
         hasRest() {
-            console.log('rest!')
             this.happiness += 1;
             return this.happiness;
         }
 
         hasMoney() {
-            console.log('money!')
             this.happiness += 1;
             return this.happiness;
         }
 
+        //вынес проверку погоды в отдельную функцию
         checkWeather() {
             const city = 'moscow'
             const apikey = '2d40cbf794a458b8fd13699eba785e42';
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url, false);
             xhr.send();
@@ -35,11 +33,12 @@ window.onload = function() {
                 console.log(xhr.statusText);
             } else {
                 const weatherObject = JSON.parse(xhr.responseText);
-                const temp = weatherObject.main.temp - 273;
+                return(weatherObject.main.temp - 273);
             }
         }
 
         isSunny() {
+            console.log(this.checkWeather())
             if(this.checkWeather() > 15) {
                 this.happiness += 1;
             }
@@ -74,7 +73,7 @@ window.onload = function() {
         personName.textContent = client.name + ':';
         const icon = document.querySelector('.icon');
         console.log(client.happiness)
-        if(client.happiness === 4 && true) {
+        if(client.happiness === 4) {
             icon.innerHTML = '&#128513;';
         } else if (client.happiness === 2 || client.happiness === 3) {
             icon.innerHTML = '&#128528;';
