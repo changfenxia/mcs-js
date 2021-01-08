@@ -7,6 +7,6 @@ window.onload = function() {
 
     btn.addEventListener('click', function(e) {
         e.preventDefault();
-        result.textContent = Math.sin(angle.value);
+        result.textContent = Math.sin(angle.value * Math.PI / 180);
     });
 }

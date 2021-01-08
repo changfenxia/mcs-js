@@ -6,18 +6,15 @@ window.onload = function() {
         }
 
         hasCat() {
-            this.happiness += 1;
-            return this.happiness;
+            return ++this.happiness;
         }
 
         hasRest() {
-            this.happiness += 1;
-            return this.happiness;
+            return ++this.happiness;
         }
 
         hasMoney() {
-            this.happiness += 1;
-            return this.happiness;
+            return ++this.happiness;
         }
 
         //вынес проверку погоды в отдельную функцию

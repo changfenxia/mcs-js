@@ -28,7 +28,7 @@ function createCurrencyBlock(name, price) {
   cblock.appendChild(cprice);
   const cpriceGraph = document.createElement('div');
   cpriceGraph.className = 'price-graph';
-  cpriceGraph.style.width = price / 2 + 'px';
+  cpriceGraph.style.width = price / 25 + 'vw';
   cblock.appendChild(cpriceGraph);
   return cblock;
 }
